@@ -2,7 +2,7 @@
 ###### Project smoking exposure & dental caries #####
 #####################################################
 
-# Project: Association of Maternal and Household Smoking with Childhood Dental Caries (in the Generation R Study cohort)
+# Project: Association of Maternal and Household Smoking with Childhood & Adolescent Dental Caries (in the Generation R Study cohort)
 
 # Author: Anna Suleri 
 
