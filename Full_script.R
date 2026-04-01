@@ -312,9 +312,10 @@ miss_values_function <- function(df){
 # Remove unnecessary covars
 full_df_short <- select(full_df, -c('RemoveData', 'm_avg_cigars_2m', 'm_avg_pipes_2m', 'p_avg_cigars_2m', 'p_avg_pipes_2m', 'others_avg_cigarettes_2m' , 'others_avg_cigars_2m', 'others_avg_pipes_2m', 'others_smoke_home_6m', 'others_avg_cigarettes_6m', 'others_avg_cigars_6m', 'others_avg_pipes_6m', 'smoke_home_5y', 'ETHNFv2', 'ETHNP', 'ETHNMv2', 'EDUCP', 'EDUCM', 'INCOME', 'A0300125', 'calorierijk_tussendoortje_weekdag_5y', 'calorierijk_tussendoortje_weekend_5y', 'snoep_of_chocola_13y', 'frisdrank_13y', 'sugar_snacks_5y_weekend', 'sugar_snacks_5y_weekday', 'sugar_drinks_13y', 'sugar_snacks_13y'))
 
-# Calculate missiginess per var (range missingness in covariates 1.6% to 67.2% in full df)
+# Calculate missiginess per var (range missingness in covariates 1.6% to 67.2% in full df and 0.6% to 60.4% in included sample)
 miss_values_function(full_df_short)
-
+miss_values_function(df_descriptives)
+                         
 ## Impute missing data in covariates (30 datasets, 50 iterations) on whole dataset for better quality imputation, later select only included participants
 # Function
 imputation_function <- function(data, exclude_imp_vars, exclude_predictors, method = "default") {
