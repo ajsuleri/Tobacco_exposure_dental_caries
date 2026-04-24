@@ -790,7 +790,7 @@ ggplot(filter(cat_vars, !is.na(value)),
        aes(x = value, y = perc, fill = variable)) +
   geom_col(show.legend = FALSE) +
   facet_wrap(~variable, scales = "free") +
-  scale_fill_brewer(palette = "GnBu") +
+  scale_fill_brewer(palette = "Accent") +
   labs(
     x = "Category",
     y = "Prevalence (%)"
